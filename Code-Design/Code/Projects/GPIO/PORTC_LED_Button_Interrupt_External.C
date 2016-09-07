@@ -4,16 +4,16 @@
 #fuses HS, NOWDT, NOLVP
 #include "../Library/18F4520ptr.h"
 
-#INT_EXT
+#INT_EXT0 // PIN_B0 external interrupt circuit
 void int_ext_isr(){
 	*PORT^=0X80;
 }
 
-#INT_EXT1
+#INT_EXT1 // PIN_B1 external interrupt circuit
 void int_ext_isr(){
 }
 
-#INT_EXT2
+#INT_EXT2 // PIN_B2 external interrupt circuit
 void int_ext_isr(){
 }
 
@@ -26,8 +26,6 @@ main(){
 	
 	while(1){
 		*PORTB ^= 0x40;
-		delay_ms(300);
+		//delay_ms(300);
 		}
 }
-
-b

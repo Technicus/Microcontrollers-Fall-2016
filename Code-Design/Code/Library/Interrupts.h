@@ -4,6 +4,9 @@
  * External interrupt control
  *
  */
+#define INTERRUPT_0 #INT_EXT0 // PIN_B0 external interrupt circuit
+#define INTERRUPT_1 #INT_EXT1 // PIN_B0 external interrupt circuit
+#define INTERRUPT_2 #INT_EXT2 // PIN_B0 external interrupt circuit
 
 struct INTCON_{
 	int RBIF:1;
