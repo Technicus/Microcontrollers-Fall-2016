@@ -2,14 +2,11 @@
 
 // Master, Local, Individual switch to turn on interrupt
 
-#included <18f4520.h>
-#use delay (clock = 20000000)
-#fuses HS, NOWDT, NOLVP
-#include "../Library/18F4520ptr.h"
+#include "../../Library/Library_18f4520.h"
 
 //int x = 255;
 
-#INT_EXT0 // PIN_B0 external interrupt circuit
+#INT_EXT // PIN_B0 external interrupt circuit
 void int_ext_isr(){
 	INTCON -> INT0IE = 0;  // Software debouncing
 	//*PORT^=0X80;
@@ -39,7 +36,7 @@ main//(){
 	INTCON -> PEIE = 1; 		// Peripheral Interrupt Enable bit
 	INTCON -> INT0IE = 1;		// INT0 External Interrupt Enable bit
 	INTCON2 -> INTEDG0 = 1;		// External Interrupt 0 Edge Select bit
-	
+
 	while(1){
 		*PORTB ^= 0x80;
 		delay_ms(x);

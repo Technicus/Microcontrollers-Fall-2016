@@ -10,6 +10,6 @@ main(){
    *TRISC = 0x00;
    while(1){
    	*PORTC ^= 0x01;
-   	delay_ms(500);
+   	delay_ms(5);
    }
 }
