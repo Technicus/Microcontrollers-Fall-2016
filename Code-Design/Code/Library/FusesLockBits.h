@@ -1,3 +1,3 @@
 // Set clock speed and fuses
-#use delay (clock = 200000000)
+#use delay (clock = 20000000)
 #fuses HS, NOWDT, NOLvP

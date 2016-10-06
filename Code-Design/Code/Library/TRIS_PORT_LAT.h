@@ -1,8 +1,8 @@
-/* 
+/*
  * TRIS_PORT_LAT.h
- * 
+ *
  * GPIO
- * 
+ *
  */
 
 int *TRISA = REGISTER_TRISA;
@@ -22,3 +22,15 @@ int *LATB = REGISTER_LATB;
 int *LATC = REGISTER_LATC;
 int *LATD = REGISTER_LATD;
 int *LATE = REGISTER_LATE;
+
+struct ADCON_0{
+   int :1;
+   int :1;
+   int :1;   
+   int :1;
+   int :1;
+   int :1;
+   int :1;
+   int :1;
+};
+struct ADCON_0 *ADCON0 = REGISTER_ADCON0;
